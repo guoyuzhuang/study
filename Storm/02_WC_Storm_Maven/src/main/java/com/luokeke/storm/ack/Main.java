@@ -1,6 +1,6 @@
-package com.luokeke;
+package com.luokeke.storm.ack;
 
-public class Luokeke {
+public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
