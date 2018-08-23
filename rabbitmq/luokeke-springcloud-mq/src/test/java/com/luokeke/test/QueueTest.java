@@ -26,6 +26,6 @@ public class QueueTest {
 	 */
 	@Test
 	public void test1(){
-		this.sender.send("Hello RabbitMQ-luokekeceshi");
+		this.sender.send("Hello RabbitMQ-ccmc");
 	}
 }
