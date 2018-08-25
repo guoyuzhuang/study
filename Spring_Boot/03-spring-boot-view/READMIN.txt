@@ -1,0 +1,5 @@
+Spring Boot 视图层技术学习
+访问JSP页面内容：
+    http://127.0.0.1:8080/showUser
+访问FreeMarker页面内容：
+    http://127.0.0.1:8080/showUserFreeMarker
