@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luokeke.db.mapper.UsersMapper">
+    <insert id="insertUsers" parameterType="com.luokeke.db.entity.Users">
+        insert into users(name,age) values(#{name},#{age})
+    </insert>
+    
+    <select id="queryUsers" resultType="com.luokeke.db.entity.Users" parameterType="int" >
+        select * from users where id = #{id}
+    </select>
+</mapper>
