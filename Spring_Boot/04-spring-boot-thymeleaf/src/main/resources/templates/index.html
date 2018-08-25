@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf入门学习</title>
+</head>
+<body>
+<span th:text="Hello："></span><br />
+<span th:text="${msg}"></span><br />
+<input type="text" name="username" th:value="${msg}" /><br />
+<span th:text="${#strings.isEmpty(msg)}"></span><br />
+判断参数中是否有‘张三’字符串：<span th:text="${#strings.contains(msg, '张三')}"></span><br />
+判断参数中是否有‘zhangsan’字符串：<span th:text="${#strings.contains(msg, 'zhangsan')}"></span><br />
+判断参数中是否以‘张三’开头：<span th:text="${#strings.startsWith(msg, '张三')}"></span><br />
+判断参数中是否以‘李四’开头：<span th:text="${#strings.startsWith(msg, '李四')}"></span><br />
+判断参数中是否以‘李四’结尾：<span th:text="${#strings.endsWith(msg, '李四')}"></span><br />
+判断参数中是否以‘王五’结尾：<span th:text="${#strings.endsWith(msg, '王五')}"></span><br />
+输出参数的长度：<span th:text="${#strings.length(msg)}"></span><br />
+输出字符串的开始位置：<span th:text="${#strings.indexOf(msg, '李四')}"></span>
+</body>
+</html>
