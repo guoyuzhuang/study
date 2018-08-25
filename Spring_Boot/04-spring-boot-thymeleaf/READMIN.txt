@@ -1,0 +1,10 @@
+Spring Boot整合thymeleaf学习
+1：变量输出：th:text
+2：将输出值放到input标签的value值中：th:value
+3：变量的判断功能，判断字符串是否为空：th:text="${#strings.isEmpty(msg)}"：判断msg是否为空，返回值为true和false
+    #表示要调用thymeleaf内置对象，大部分的内置对象都是以s结尾
+            判断参数中是否有‘张三’字符串：th:text="${#strings.contains(msg, '张三')}"
+            判断参数中是否以‘张三’开头：th:text="${#strings.startsWith(msg, '张三')}"
+            判断参数中是否以‘张三’结尾：th:text="${#strings.endsWith(msg, '张三')}"
+            输出参数的长度：th:text="${#strings.length(msg)}"
+            输出字符串的开始位置：th:text="${#strings.indexOf(msg, '李四')}"
