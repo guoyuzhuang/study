@@ -1,0 +1,9 @@
+热部署遇到的坑：
+    必须将Eclipse的自动编译功能打开，具体位置为：在菜单中找到：
+        Project --> Build Automatically
+        
+  否则热部署不会起作用
+  
+第一种热部署方式，使用Maven查件实现热部署的方式，必须使用Maven命令启动才行：【spring-boot:run】
+
+反正好像还没搞懂
