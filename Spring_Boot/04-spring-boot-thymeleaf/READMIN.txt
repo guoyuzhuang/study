@@ -8,3 +8,6 @@ Spring Boot整合thymeleaf学习
             判断参数中是否以‘张三’结尾：th:text="${#strings.endsWith(msg, '张三')}"
             输出参数的长度：th:text="${#strings.length(msg)}"
             输出字符串的开始位置：th:text="${#strings.indexOf(msg, '李四')}"
+            
+            
+            
