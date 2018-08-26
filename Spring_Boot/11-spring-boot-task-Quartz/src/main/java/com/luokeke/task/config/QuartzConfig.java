@@ -8,6 +8,7 @@ import org.springframework.scheduling.quartz.JobDetailFactoryBean;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 import com.luokeke.task.quartz.QuartzDemo;
+import com.luokeke.task.quartz.QuartzLuokeke;
 
 /**
  * Quartz配置类
@@ -26,6 +27,14 @@ public class QuartzConfig {
 		JobDetailFactoryBean factory = new JobDetailFactoryBean();
 		//关联我们自己的Job类
 		factory.setJobClass(QuartzDemo.class);
+		return factory;
+	}
+	
+	@Bean
+	public JobDetailFactoryBean jobDetailFactoryBeanLuokeke(){
+		JobDetailFactoryBean factory = new JobDetailFactoryBean();
+		//关联我们自己的Job类
+		factory.setJobClass(QuartzLuokeke.class);
 		return factory;
 	}
 	
@@ -49,9 +58,9 @@ public class QuartzConfig {
 	 * Cron Trigger
 	 */
 	@Bean
-	public CronTriggerFactoryBean cronTriggerFactoryBean(JobDetailFactoryBean jobDetailFactoryBean){
+	public CronTriggerFactoryBean cronTriggerFactoryBean(JobDetailFactoryBean jobDetailFactoryBean1){
 		CronTriggerFactoryBean factory = new CronTriggerFactoryBean();
-		factory.setJobDetail(jobDetailFactoryBean.getObject());
+		factory.setJobDetail(jobDetailFactoryBean1.getObject());
 		//设置触发时间
 		factory.setCronExpression("0/2 * * * * ?");
 		return factory;
