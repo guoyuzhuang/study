@@ -46,25 +46,29 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
-        <!-- 这一行也需要增加，否则热部署不生效 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>true</scope>
-        </dependency>
+		<!-- 这一行也需要增加，否则热部署不生效 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<scope>true</scope>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-loader</artifactId>
+		</dependency> -->
 	</dependencies>
 
-	<build>
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                    <fork>true</fork>
-                    <!-- spring-boot:run 中文乱码解决 -->
-                    <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
-                </configuration>
+					<fork>true</fork>
+					spring-boot:run 中文乱码解决
+					<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.springframework</groupId>
@@ -74,6 +78,6 @@
 				</dependencies>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
 
 </project>

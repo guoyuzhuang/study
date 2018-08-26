@@ -10,12 +10,8 @@ public class UserController {
 
 	@RequestMapping("/showPage")
 	public String showPage(Model model) {
-		model.addAttribute("msg", "this is msg message00--0  0");
+		model.addAttribute("msg", "this is msg message");
 		System.out.println("彻底解决打印日志中文乱码问题");
 		return "test";
-	}
-	
-	public static void main(String[] args) {
-		System.out.println("中文乱码");
 	}
 }
