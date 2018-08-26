@@ -25,7 +25,13 @@ public class QueueTest {
 	 * 测试消息队列
 	 */
 	@Test
-	public void test1(){
-		this.sender.send("Hello RabbitMQ-ccmc");
+	public void test1() throws InterruptedException{
+		while (true) {
+			this.sender.send("Hello RabbitMQ-ccmc");
+			this.sender.send("Hello RabbitMQ-qweqe");
+			this.sender.send("Hello RabbitMQ-cxvxcv");
+			this.sender.send("Hello RabbitMQ-234234");
+			Thread.sleep(200);
+		}
 	}
 }
