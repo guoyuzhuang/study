@@ -1,3 +1,0 @@
-Spring Boot缓存技术：整合Ehcache技术
-
-UsersServiceImpl类中，如果对findUserById方法不添加【@Cacheable(value="users")】注解，则查询users时，需要发送两条sql，如果添加了，则只发送一条sql

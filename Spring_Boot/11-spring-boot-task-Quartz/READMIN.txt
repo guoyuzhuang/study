@@ -1,3 +1,5 @@
-Spring Boot缓存技术：整合Ehcache技术
-
-UsersServiceImpl类中，如果对findUserById方法不添加【@Cacheable(value="users")】注解，则查询users时，需要发送两条sql，如果添加了，则只发送一条sql
+该项目中有两种调用Quartz定时任务的方式：
+        第一种方式：使用main方法，自定义定时任务的相关对象（Job、Trigger、Scheduler），然后调用定时任务
+            该项目启动路径为：com.luokeke.task.quartz.QuartzMain
+        第二种方式：使用Spring Boot整合Quartz，使用Spring Boot调用Quratz
+            该项目启动路径为：com.luokeke.task.Application.java
